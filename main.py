@@ -6,9 +6,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
+
 # cookies
-
-
 def save_cookies(driver, location):
     pickle.dump(driver.get_cookies(), open(location, "wb"))
 
@@ -26,7 +25,6 @@ def load_cookies(driver, location, url=None):
 
 
 def delete_cookies(driver, domains=None):
-
     if domains is not None:
         cookies = driver.get_cookies()
         original_len = len(cookies)
@@ -43,7 +41,7 @@ def delete_cookies(driver, domains=None):
 
 
 # save cookies
-cookies_location = "C:\\Users\\R4HA\\Documents\\r4habotcookies.txt"
+cookies_location = "r4habotcookies.txt"
 
 # link produk
 link_produk = None
